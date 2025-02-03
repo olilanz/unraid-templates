@@ -22,13 +22,13 @@ The benefit of having this deployment anyways, is that of you have a powerful Un
 Consider to contribute. Together we can make this awesome!&#xD;
 https://github.com/olilanz/pinokio3-nvidia</Overview>
   <Category>AI: Productivity: Status:Beta</Category>
-  <WebUI>http://[IP]:[port:42000]</WebUI>
-  <TemplateURL/>
-  <Icon/>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/pinokio3-nvidia.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/pinokio3-nvidia.png</Icon>
   <ExtraParams>--gpus all</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1738603404</DateInstalled>
+  <DateInstalled>1738603405</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
