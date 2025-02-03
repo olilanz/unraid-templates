@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Pinokio</Name>
+  <Repository>olilanz/pinokio3-unraid-nvidia</Repository>
+  <Registry>https://hub.docker.com/r/olilanz/pinokio3-unraid-nvidia</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://discord.com/invite/TQdNwadtE4</Support>
+  <Project>https://pinokio.computer</Project>
+  <Overview>Pinokio 3.6 - A browser that lets you install, run, and manage ANY server application, locally.&#xD;
+&#xD;
+https://pinokio.computer&#xD;
+&#xD;
+Pinokio is for AI apps what Steam is for games. You start it, launch the portal, and browse the AI app store. They say that it comes with batteries included. When you select an AI app, it downloads all dependencies (tools, configurations, models, UI, etc...). If all goes well (after tens or hundreds of GB of download), you are able to explore the world of AI.&#xD;
+&#xD;
+I must say, though, that since Pinokio was designed as a desktop app, running it in a container is a bit of a stretch. There will be features that don't work as expected or don't work at all. &#xD;
+&#xD;
+The benefit of having this deployment anyways, is that of you have a powerful Unraid server with some expensive GPUs, you may want to put it to work for you. And then, access all the AI power from your lightweight laptop from anywhere at your convenience.&#xD;
+&#xD;
+Consider to contribute. Together we can make this awesome!&#xD;
+https://github.com/olilanz/pinokio3-nvidia</Overview>
+  <Category>AI: Productivity: Status:Beta</Category>
+  <WebUI>http://[IP]:[port:42000]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--gpus all</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1738603404</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
+  <Config Name="Pinokio portal port" Target="42000" Default="42000" Mode="tcp" Description="Port for the main portal." Type="Port" Display="always" Required="true" Mask="false">42000</Config>
+  <Config Name="Port for app 1" Target="7860" Default="7860" Mode="tcp" Description="Every app that is started will use a port. This port is for app 1." Type="Port" Display="always" Required="false" Mask="false">7860</Config>
+  <Config Name="Port for app 2" Target="7861" Default="7861" Mode="tcp" Description="Every app that is started will use a port. This port is for app 2." Type="Port" Display="always" Required="false" Mask="false">7861</Config>
+  <Config Name="Port for app 3" Target="7862" Default="7862" Mode="tcp" Description="Every app that is started will use a port. This port is for app 3." Type="Port" Display="always" Required="false" Mask="false">7862</Config>
+  <Config Name="Environment cache folder" Target="/root/pinokio" Default="/mnt/user/appdata/pinokio/data" Mode="rw" Description="Folder where Pinokio stores the downloaded files for the app&#xF8;s execurion environments." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pinokio/data</Config>
+  <Config Name="Configuration folder" Target="/root/.config/Pinokio" Default="/mnt/user/appdata/pinokio/config" Mode="rw" Description="Folder where Pinokio stores application configuration." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pinokio/config</Config>
+  <TailscaleStateDir/>
+</Container>
