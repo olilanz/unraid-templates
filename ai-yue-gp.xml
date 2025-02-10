@@ -16,8 +16,8 @@
   </Overview>
   <Category>AI: Productivity: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:7860]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/pinokio3-nvidia.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/pinokio3-nvidia.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/ai-yue-gp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/ai-yue-gp.png</Icon>
   <ExtraParams>--gpus all</ExtraParams>
   <PostArgs/>
   <CPUset/>
