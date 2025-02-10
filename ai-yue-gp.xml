@@ -25,11 +25,7 @@
   <DonateText/>
   <DonateLink/>
   <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
-  <Config Name="Pinokio portal port" Target="42000" Default="42000" Mode="tcp" Description="Port for the main portal." Type="Port" Display="always" Required="true" Mask="false">42000</Config>
-  <Config Name="Port for app 1" Target="7860" Default="7860" Mode="tcp" Description="Every app that is started will use a port. This port is for app 1." Type="Port" Display="always" Required="false" Mask="false">7860</Config>
-  <Config Name="Port for app 2" Target="7861" Default="7861" Mode="tcp" Description="Every app that is started will use a port. This port is for app 2." Type="Port" Display="always" Required="false" Mask="false">7861</Config>
-  <Config Name="Port for app 3" Target="7862" Default="7862" Mode="tcp" Description="Every app that is started will use a port. This port is for app 3." Type="Port" Display="always" Required="false" Mask="false">7862</Config>
-  <Config Name="Environment cache folder" Target="/root/pinokio" Default="/mnt/user/appdata/pinokio/data" Mode="rw" Description="Folder where Pinokio stores the downloaded files for the app&#xF8;s execurion environments." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pinokio/data</Config>
-  <Config Name="Configuration folder" Target="/root/.config/Pinokio" Default="/mnt/user/appdata/pinokio/config" Mode="rw" Description="Folder where Pinokio stores application configuration." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pinokio/config</Config>
+  <Config Name="WebUI" Target="7860" Default="7860" Mode="tcp" Description="Port for the main portal." Type="Port" Display="always" Required="true" Mask="false">7860</Config>
+  <Config Name="Cache folder" Target="/data" Default="/mnt/user/appdata/ai-yue-gp" Mode="rw" Description="Folder where YuEGP stores the downloaded files. Note that this folder will be between 20 - 30 GB big." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ai-yue-gp</Config>
   <TailscaleStateDir/>
 </Container>
