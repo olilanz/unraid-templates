@@ -1,19 +1,22 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Pinokio</Name>
-  <Repository>olilanz/yue-gp</Repository>
-  <Registry>https://hub.docker.com/repository/docker/olilanz/yue-gp</Registry>
+  <Name>YuE-GP</Name>
+  <Repository>olilanz/ai-yue-gp</Repository>
+  <Registry>https://hub.docker.com/repository/docker/olilanz/ai-yue-gp</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/deepbeepmeep/YuEGP/issues</Support>
   <Project>https://github.com/deepbeepmeep/YuEGP</Project>
-  <Overview>YuE AI Music Generation for the GPU Poor (by deepmeepbeep)
-  Our model's name is YuE (乐). In Chinese, the word means "music" and "happiness." Some of you may find words that start with Yu hard to pronounce. If so, you can just call it "yeah." We wrote a song with our model's name.
-
-  YuE is a groundbreaking series of open-source foundation models designed for music generation, specifically for transforming lyrics into full songs (lyrics2song). It can generate a complete song, lasting several minutes, that includes both a catchy vocal track and complementary accompaniment, ensuring a polished and cohesive result. YuE is capable of modeling diverse genres/vocal styles. Below are examples of songs in the pop and metal genres. For more styles, please visit the demo page.  
-  </Overview>
+  <Overview>YuE AI Music Generation for the GPU Poor (by deepmeepbeep)&#xD;
+  Our model's name is YuE (&#x4E50;). In Chinese, the word means "music" and "happiness." Some of you may find words that start with Yu hard to pronounce. If so, you can just call it "yeah." We wrote a song with our model's name.&#xD;
+&#xD;
+  YuE is a groundbreaking series of open-source foundation models designed for music generation, specifically for transforming lyrics into full songs (lyrics2song). It can generate a complete song, lasting several minutes, that includes both a catchy vocal track and complementary accompaniment, ensuring a polished and cohesive result. YuE is capable of modeling diverse genres/vocal styles. Below are examples of songs in the pop and metal genres. For more styles, please visit the demo page.  &#xD;
+ &#xD;
+NOTE: On first start-up, a number of inference models and libraries will be downloaded to the cache folder. Be patient. It will be up to 30 GB of storage. &#xD;
+&#xD;
+NOTE: All generated songs remain in the cache folder - even if they have been downloaded through the WebUI. You may manually remove them, if disk space becomes precious.</Overview>
   <Category>AI: Productivity: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:7860]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/ai-yue-gp.xml</TemplateURL>
@@ -21,11 +24,16 @@
   <ExtraParams>--gpus all</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1738603406</DateInstalled>
+  <DateInstalled>1739485186</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
   <Config Name="WebUI" Target="7860" Default="7860" Mode="tcp" Description="Port for the main portal." Type="Port" Display="always" Required="true" Mask="false">7860</Config>
   <Config Name="Cache folder" Target="/data" Default="/mnt/user/appdata/ai-yue-gp" Mode="rw" Description="Folder where YuEGP stores the downloaded files. Note that this folder will be between 20 - 30 GB big." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/ai-yue-gp</Config>
-  <TailscaleStateDir/>
+  <Config Name="GPU Profile" Target="YUEGP_PROFILE" Default="3" Mode="" Description="1: Fastest model, but requires 16GB or more.&#13;&#10;2: Undefined/undocumented.&#13;&#10;3: Slower, up to 12GB VRAM.&#13;&#10;4: Slowest, but works with less than 10GB." Type="Variable" Display="always" Required="false" Mask="false">3</Config>
+  <Config Name="CUDA Index" Target="YUEGP_CUDA_IDX" Default="0" Mode="" Description="Index of the GPU being used for the inference." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="Enable Audio Prompt" Target="YUEGP_ENABLE_ICL" Default="0" Mode="" Description="0: Provide input prompt in text form, i.e. describe the style using keywords.&#13;&#10;1: Allows you to send one or 2 audio clips as reference for the style." Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Transformer Patch" Target="YUEGP_TRANSFORMER_PATCH" Default="0" Mode="" Description="0: Run with the original transformers, without deepmeepbeep's optimizations.&#13;&#10;1: Apply the patches - may give unintended side effects in certain configurations." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <Config Name="Auto Update" Target="YUEGP_AUTO_UPDATE" Default="0" Mode="" Description="0: Don't update automatically. Use the scripts that are bundled.&#13;&#10;1: Update and use the latest features / models. But also accept that this may being breaking changes." Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+  <TailscaleStateDsir/>
 </Container>
