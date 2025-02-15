@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HunyuanVideo-GP</Name>
+  <Repository>olilanz/ai-hunyuan-video-gp</Repository>
+  <Registry>https://hub.docker.com/repository/docker/olilanz/yue-gp</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/deepbeepmeep/HunyuanVideoGP/issues</Support>
+  <Project>https://github.com/deepbeepmeep/HunyuanVideoGP</Project>
+  <Overview>Hunyuan AI Video Generator for the GPU Poor (by deepmeepbeep)&#xD;
+Hunyuan Video is an open source AI based video generator. This version of the Hunyuan Video generator is optimized by DeepMeepBeep for runing on consumer GPUs with 24GB VRAM (optimally), or as low as 6GB VRAM (minimally).&#xD;
+ &#xD;
+NOTE: On first start-up, a number of inference models and libraries will be downloaded to the cache folder. Be patient. It will be up to 15 GB of storage. &#xD;
+  <Category>AI: Productivity: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:7860]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/ai-hunyuan-video-gp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/olilanz/unraid-templates/refs/heads/main/ai-hunyuan-video-gp</Icon>
+  <ExtraParams>--gpus all</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1739488811</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>**Nvidia Driver plugin** (nVidia Support)</Requires>
+  <Config Name="WebUI" Target="7860" Default="7860" Mode="tcp" Description="Port for the main portal." Type="Port" Display="always" Required="true" Mask="false">7860</Config>
+  <Config Name="Cache folder" Target="/workspace" Default="/mnt/user/appdata/ai-hunyuan-video-gp" Mode="rw" Description="Folder where Hunyuan Video stores the downloaded files. Note that this folder will be about 15GB big." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/ai-hunyuan-video-gp</Config>
+  <Config Name="Auto Update" Target="YUEGP_AUTO_UPDATE" Default="0" Mode="" Description="0: Don't update automatically. Use the scripts that are bundled.&#13;&#10;1: Update and use the latest features / models. But also accept that this may being breaking changes." Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+  <TailscaleStateDir/>
+</Container>
