@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>HunyuanVideo-GP</Name>
   <Repository>olilanz/ai-hunyuan-video-gp</Repository>
-  <Registry>https://hub.docker.com/repository/docker/olilanz/yue-gp</Registry>
+  <Registry>https://hub.docker.com/repository/docker/olilanz/ai-hunyuan-video-gp</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>
